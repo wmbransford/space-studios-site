@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Space Studios — AI-forward digital marketing</title>
+<meta name="description" content="Space Studios builds agentic AI systems for companies that know AI matters but can't leverage it. Two-week pilots. No retainers until we prove it." />
+<meta name="theme-color" content="#05070b" />
+
+<!-- Open Graph -->
+<meta property="og:title" content="Space Studios — AI-forward digital marketing" />
+<meta property="og:description" content="Agentic systems for companies that know AI matters but can't leverage it. Two weeks. Then we talk price." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://spacestudios.us" />
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%97%8F%3C/text%3E%3C/svg%3E" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ink: {
+            950: '#05070b',
+            900: '#0a0d13',
+            800: '#11151d',
+            700: '#1a202b',
+          },
+          accent: {
+            DEFAULT: '#6ee7ff',
+            soft: '#a8f0ff',
+          }
+        },
+        fontFamily: {
+          sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          display: ['"Instrument Serif"', 'ui-serif', 'Georgia', 'serif'],
+        }
+      }
+    }
+  }
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+<style>
+  html { scroll-behavior: smooth; }
+  body { background: #05070b; color: #e7eaf0; -webkit-font-smoothing: antialiased; }
+
+  /* Subtle grid backdrop */
+  .bg-grid {
+    background-image:
+      radial-gradient(ellipse 80% 60% at 50% -10%, rgba(110,231,255,0.10), transparent 60%),
+      linear-gradient(to right, rgba(255,255,255,0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255,255,255,0.04) 1px, transparent 1px);
+    background-size: auto, 56px 56px, 56px 56px;
+    background-position: center top, center, center;
+  }
+
+  .glow-ring {
+    box-shadow: 0 0 0 1px rgba(110,231,255,0.25), 0 20px 60px -20px rgba(110,231,255,0.35);
+  }
+
+  .dot {
+    width: 6px; height: 6px; border-radius: 9999px; background: #6ee7ff;
+    box-shadow: 0 0 12px #6ee7ff;
+  }
+
+  .hairline { border-color: rgba(255,255,255,0.08); }
+
+  .btn-primary {
+    background: #6ee7ff; color: #05070b; font-weight: 600;
+    padding: 0.85rem 1.25rem; border-radius: 9999px;
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+  }
+  .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 10px 30px -10px rgba(110,231,255,0.55); background: #a8f0ff; }
+
+  .btn-ghost {
+    color: #e7eaf0; font-weight: 500;
+    padding: 0.85rem 1.25rem; border-radius: 9999px;
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    border: 1px solid rgba(255,255,255,0.12);
+    transition: border-color .15s ease, background .15s ease;
+  }
+  .btn-ghost:hover { border-color: rgba(255,255,255,0.28); background: rgba(255,255,255,0.03); }
+
+  .card {
+    background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 20px;
+  }
+
+  .tag {
+    display: inline-flex; align-items: center; gap: .5rem;
+    padding: .35rem .75rem; border-radius: 9999px;
+    font-size: .78rem; letter-spacing: .02em;
+    color: #a8f0ff; background: rgba(110,231,255,0.08);
+    border: 1px solid rgba(110,231,255,0.25);
+  }
+
+  .num {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    color: #6ee7ff;
+  }
+
+  .marquee {
+    mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+  }
+</style>
+</head>
+<body class="antialiased">
+
+<!-- Nav -->
+<header class="relative z-20">
+  <div class="max-w-6xl mx-auto px-6 py-6 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-2 font-semibold tracking-tight">
+      <span class="dot"></span>
+      <span>Space Studios</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-8 text-sm text-white/70">
+      <a href="#services" class="hover:text-white transition">Services</a>
+      <a href="#approach" class="hover:text-white transition">Approach</a>
+      <a href="#founder" class="hover:text-white transition">Founder</a>
+    </nav>
+    <a href="#book" class="btn-primary text-sm">
+      Book a call
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+    </a>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="relative bg-grid">
+  <div class="max-w-6xl mx-auto px-6 pt-16 pb-28 md:pt-24 md:pb-36">
+    <div class="tag mb-8">
+      <span class="dot"></span>
+      AI-forward digital marketing — Austin, TX
+    </div>
+    <h1 class="font-display text-5xl md:text-7xl lg:text-8xl leading-[1.02] tracking-tight max-w-4xl">
+      Most companies know AI matters.
+      <span class="italic text-white/60">Almost none</span> are using it well.
+    </h1>
+    <p class="mt-8 text-lg md:text-xl text-white/70 max-w-2xl leading-relaxed">
+      Space Studios builds the agentic systems that close that gap — consolidating your data, teaching your team how to think in AI, and driving real impact. And a premium video arm for when the story needs to be seen.
+    </p>
+    <div class="mt-10 flex flex-wrap items-center gap-3">
+      <a href="#book" class="btn-primary">
+        Book a call
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+      </a>
+      <a href="#approach" class="btn-ghost">
+        How the two-week pilot works
+      </a>
+    </div>
+
+    <!-- trust strip -->
+    <div class="mt-16 md:mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 text-sm text-white/50">
+      <div><div class="text-white font-medium">Two-week pilots</div>No retainer until we prove it.</div>
+      <div><div class="text-white font-medium">Founder-led</div>You work with William, not an account manager.</div>
+      <div><div class="text-white font-medium">Built in public</div>Transparent process, documented on socials.</div>
+      <div><div class="text-white font-medium">Austin + remote</div>On-site for the work that needs it.</div>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section id="services" class="relative">
+  <div class="max-w-6xl mx-auto px-6 py-24 md:py-32">
+    <div class="flex items-end justify-between mb-14 gap-6 flex-wrap">
+      <div>
+        <div class="tag mb-5">What we do</div>
+        <h2 class="font-display text-4xl md:text-6xl leading-[1.05] tracking-tight max-w-2xl">
+          Two services. <span class="italic text-white/60">Both done seriously.</span>
+        </h2>
+      </div>
+      <p class="text-white/60 max-w-sm leading-relaxed">
+        The agentic work is the core of the company. The video work is how we tell stories that still deserve to be seen by humans.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6">
+      <!-- Service 1 — Agentic -->
+      <article class="card p-8 md:p-10 glow-ring">
+        <div class="flex items-center gap-3 mb-6">
+          <span class="num text-3xl">01</span>
+          <span class="text-accent-soft text-sm tracking-wide uppercase">Core offering</span>
+        </div>
+        <h3 class="font-display text-3xl md:text-4xl tracking-tight mb-5">Agentic system setups</h3>
+        <p class="text-white/75 leading-relaxed mb-6">
+          For companies that know AI matters but can't leverage it. We consolidate your data, build the agents that actually run work, and train your team to think with them — not around them.
+        </p>
+
+        <ul class="space-y-3 text-white/75 mb-8">
+          <li class="flex gap-3"><span class="text-accent mt-1">—</span><span><span class="text-white">Audit.</span> Where your data lives, where it leaks, where agents can compound.</span></li>
+          <li class="flex gap-3"><span class="text-accent mt-1">—</span><span><span class="text-white">Build.</span> A working agentic system on your stack. Not a slide deck.</span></li>
+          <li class="flex gap-3"><span class="text-accent mt-1">—</span><span><span class="text-white">Teach.</span> Your team learns the mental model, not just the tool.</span></li>
+        </ul>
+
+        <div class="rounded-xl border hairline bg-white/[0.02] p-5 mb-8">
+          <div class="text-xs uppercase tracking-wider text-white/50 mb-2">The pitch</div>
+          <p class="text-white/90 leading-relaxed">
+            Give us two weeks. We'll make it worth it. <span class="text-white">Then</span> we'll talk price.
+          </p>
+        </div>
+
+        <a href="#book" class="btn-primary text-sm">
+          Start the two-week pilot
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+        </a>
+      </article>
+
+      <!-- Service 2 — Video -->
+      <article class="card p-8 md:p-10">
+        <div class="flex items-center gap-3 mb-6">
+          <span class="num text-3xl">02</span>
+          <span class="text-white/50 text-sm tracking-wide uppercase">Premium video</span>
+        </div>
+        <h3 class="font-display text-3xl md:text-4xl tracking-tight mb-5">High-end corporate video</h3>
+        <p class="text-white/75 leading-relaxed mb-6">
+          Corporate commercials, brand films, aerial/drone work. The story, the camera, the edit — carried over from the original Space Studios production shop. Premium only, select projects.
+        </p>
+
+        <ul class="space-y-3 text-white/75 mb-8">
+          <li class="flex gap-3"><span class="text-white/40 mt-1">—</span><span>Corporate commercials &amp; brand films</span></li>
+          <li class="flex gap-3"><span class="text-white/40 mt-1">—</span><span>Aerial &amp; drone cinematography (FAA Part 107)</span></li>
+          <li class="flex gap-3"><span class="text-white/40 mt-1">—</span><span>Full production: concept, shoot, edit, deliver</span></li>
+        </ul>
+
+        <div class="rounded-xl border hairline bg-white/[0.02] p-5 mb-8">
+          <div class="text-xs uppercase tracking-wider text-white/50 mb-2">How it runs</div>
+          <p class="text-white/90 leading-relaxed">
+            Scoped per project. We take on a small number each quarter so each one gets real attention.
+          </p>
+        </div>
+
+        <a href="#book" class="btn-ghost text-sm">
+          Discuss a project
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+        </a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Approach / How the pilot works -->
+<section id="approach" class="relative border-t hairline">
+  <div class="max-w-6xl mx-auto px-6 py-24 md:py-32">
+    <div class="max-w-3xl mb-16">
+      <div class="tag mb-5">The two-week pilot</div>
+      <h2 class="font-display text-4xl md:text-6xl leading-[1.05] tracking-tight">
+        Prove it first. <span class="italic text-white/60">Then price it.</span>
+      </h2>
+      <p class="mt-6 text-white/70 leading-relaxed text-lg">
+        Most AI consulting is a 60-page deck and a six-month retainer. Ours is two weeks of actual work in your stack. If it didn't move the needle, you walk. If it did, we talk about what comes next.
+      </p>
+    </div>
+
+    <ol class="grid md:grid-cols-3 gap-6">
+      <li class="card p-7">
+        <div class="num text-4xl mb-4">01</div>
+        <h4 class="text-white font-semibold text-lg mb-2">Week zero — scope</h4>
+        <p class="text-white/70 leading-relaxed">A call, then a written plan. One high-leverage workflow we can automate or unlock with agents in your first two weeks.</p>
+      </li>
+      <li class="card p-7">
+        <div class="num text-4xl mb-4">02</div>
+        <h4 class="text-white font-semibold text-lg mb-2">Weeks one &amp; two — build</h4>
+        <p class="text-white/70 leading-relaxed">We ship a working system on your stack. Your team sits in. You learn how it's wired, not just what it does.</p>
+      </li>
+      <li class="card p-7">
+        <div class="num text-4xl mb-4">03</div>
+        <h4 class="text-white font-semibold text-lg mb-2">Week three — decide</h4>
+        <p class="text-white/70 leading-relaxed">We show the impact. You decide whether to keep going. No auto-renewing anything.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- Founder / Building in public -->
+<section id="founder" class="relative border-t hairline">
+  <div class="max-w-6xl mx-auto px-6 py-24 md:py-32">
+    <div class="grid md:grid-cols-5 gap-12 items-start">
+      <div class="md:col-span-3">
+        <div class="tag mb-5">Who you're working with</div>
+        <h2 class="font-display text-4xl md:text-6xl leading-[1.05] tracking-tight mb-8">
+          A founder who <span class="italic text-white/60">builds in public.</span>
+        </h2>
+        <div class="space-y-5 text-white/75 leading-relaxed text-lg max-w-2xl">
+          <p>
+            Space Studios is run by William Bransford. Early 20s, ex-Montana State, recently moved from Bozeman to Austin. The company started as a video production shop, took a detour building an AI video app, and has landed where it was always heading: an AI-native agency.
+          </p>
+          <p>
+            Everything we learn about agents, data, and what actually ships for clients — we document on socials. You'll know how we think before you ever book the call.
+          </p>
+        </div>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="https://instagram.com/will_brans" target="_blank" rel="noopener" class="btn-ghost text-sm">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            Instagram
+          </a>
+          <a href="https://www.linkedin.com/in/william-bransford" target="_blank" rel="noopener" class="btn-ghost text-sm">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
+          </a>
+          <a href="https://youtube.com/@william_bransford" target="_blank" rel="noopener" class="btn-ghost text-sm">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+            YouTube
+          </a>
+        </div>
+      </div>
+
+      <aside class="md:col-span-2 card p-7">
+        <div class="text-xs uppercase tracking-wider text-white/50 mb-3">Brand principles</div>
+        <ul class="space-y-4 text-white/85">
+          <li class="flex gap-3">
+            <span class="num text-2xl leading-none">·</span>
+            <div>
+              <div class="text-white font-medium">AI expertise, in the open</div>
+              <div class="text-white/60 text-sm">We document what we build so you can judge the work before you buy it.</div>
+            </div>
+          </li>
+          <li class="flex gap-3">
+            <span class="num text-2xl leading-none">·</span>
+            <div>
+              <div class="text-white font-medium">Young-founder speed</div>
+              <div class="text-white/60 text-sm">We ship faster than the agency that quoted you last quarter.</div>
+            </div>
+          </li>
+          <li class="flex gap-3">
+            <span class="num text-2xl leading-none">·</span>
+            <div>
+              <div class="text-white font-medium">Actually helpful</div>
+              <div class="text-white/60 text-sm">If we can solve it on a call, we will. No gatekeeping.</div>
+            </div>
+          </li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- Book a call -->
+<section id="book" class="relative border-t hairline bg-grid">
+  <div class="max-w-4xl mx-auto px-6 py-24 md:py-32 text-center">
+    <div class="tag mb-6 mx-auto">Start here</div>
+    <h2 class="font-display text-5xl md:text-7xl leading-[1.02] tracking-tight">
+      Two weeks. <span class="italic text-white/60">Then price.</span>
+    </h2>
+    <p class="mt-6 text-white/70 text-lg max-w-xl mx-auto leading-relaxed">
+      Book a 20-minute intro. Bring one workflow you wish were automated. We'll tell you on the call whether we're the right fit.
+    </p>
+    <div class="mt-10 flex flex-wrap justify-center gap-3">
+      <!-- Swap href to the Google Calendar appointment-schedule link (calendar.app.google/…) once William generates it. -->
+      <a href="mailto:william@spacestudios.us?subject=Two-week%20pilot%20%E2%80%94%20intro%20call&body=Hi%20William%2C%0A%0AOne%20workflow%20I%27d%20love%20to%20automate%3A%0A%0A%5Bone%20line%5D%0A%0APreferred%20times%20for%20a%2020-minute%20call%3A%0A%0A%5Btwo%20or%20three%20windows%5D%0A%0AThanks." class="btn-primary">
+        Book a call
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+      </a>
+      <a href="mailto:william@spacestudios.us" class="btn-ghost">
+        Or email directly
+      </a>
+    </div>
+    <p class="mt-6 text-xs text-white/40">
+      Austin, TX · working with teams across the US
+    </p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="border-t hairline">
+  <div class="max-w-6xl mx-auto px-6 py-10 flex flex-wrap items-center justify-between gap-4 text-sm text-white/50">
+    <div class="flex items-center gap-2">
+      <span class="dot"></span>
+      <span class="text-white">Space Studios</span>
+      <span class="text-white/30">— AI-forward digital marketing</span>
+    </div>
+    <div class="flex items-center gap-5">
+      <a href="https://instagram.com/will_brans" target="_blank" rel="noopener" class="hover:text-white transition">Instagram</a>
+      <a href="https://www.linkedin.com/in/william-bransford" target="_blank" rel="noopener" class="hover:text-white transition">LinkedIn</a>
+      <a href="https://youtube.com/@william_bransford" target="_blank" rel="noopener" class="hover:text-white transition">YouTube</a>
+    </div>
+    <div class="text-white/30">© <span id="year"></span> Space Studios</div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
