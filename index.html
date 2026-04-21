@@ -22,7 +22,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://spacestudios.us" />
 
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%97%8F%3C/text%3E%3C/svg%3E" />
+<link rel="icon" href="assets/favicon.png" type="image/png" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -95,6 +95,27 @@
     background: var(--accent);
     box-shadow: 0 0 10px var(--accent);
   }
+  .logo-mark {
+    display: inline-block;
+    width: 30px;
+    height: 24px;
+    background-color: var(--accent);
+    -webkit-mask: url('assets/logo.svg') no-repeat center / contain;
+            mask: url('assets/logo.svg') no-repeat center / contain;
+    opacity: 0.6;
+    filter:
+      drop-shadow(0 0 2px rgba(110,231,255,0.9))
+      drop-shadow(0 0 8px rgba(110,231,255,0.55));
+    transition: opacity .2s ease, filter .2s ease;
+  }
+  .logo:hover .logo-mark,
+  .brand:hover .logo-mark {
+    opacity: 0.85;
+    filter:
+      drop-shadow(0 0 2px rgba(110,231,255,1))
+      drop-shadow(0 0 12px rgba(110,231,255,0.75));
+  }
+  footer .logo-mark { width: 26px; height: 21px; }
   .nav-links {
     display: flex;
     gap: 28px;
@@ -498,7 +519,7 @@
 <nav class="nav">
   <div class="container nav-inner">
     <a href="/" class="logo" aria-label="Space Studios">
-      <span class="dot"></span>
+      <span class="logo-mark" role="img" aria-label="Space Studios logo"></span>
       <span>Space Studios</span>
     </a>
     <div class="nav-links">
@@ -704,7 +725,7 @@
 <footer>
   <div class="container footer-inner">
     <div class="brand">
-      <span class="dot"></span>
+      <span class="logo-mark" role="img" aria-label="Space Studios logo"></span>
       <span><b>Space Studios</b> — AI consulting, Austin TX</span>
     </div>
     <div class="footer-links">
