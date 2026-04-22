@@ -17,8 +17,9 @@ Push to `main`. GitHub Pages serves the root.
 - `CNAME` — custom domain (activated at DNS cutover, not before).
 
 ## Positioning
-- Single-focus: AI consulting / agentic systems. No video service on the site as of 2026-04-20.
-- Hero pitch: "Give us two weeks. We'll make it worth it. Then we'll talk price."
+- AI-native studio for marketing + ops. Execution only — no consulting/advisory framing (that lives at williambransford.com).
+- Hero: "AI systems your team runs. We scope, build, ship."
+- Repositioned 2026-04-22 (see `strategy-agent/space-studios-repositioning.md`).
 
 ## Placeholders to replace
 - **Book-a-call CTA**: wired to `https://calendar.app.google/sbbST69RKQumuCvZ9` (Google Calendar appointment schedule).
